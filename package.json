@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "checkNpmVersion": "./scripts/check-npm-version.sh",
+    "checkNpmVersion": "./scripts/check-npm-version.dsh",
     "clean": "./config/cli/clean-root.sh",
     "e2e:inject": "node ./scripts/e2e-inject-resolutions.js",
     "e2e:publish": "./scripts/e2e-publish.sh",
