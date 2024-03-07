@@ -23,8 +23,6 @@ function runTestsWithFormatter(testScript, formatter) {
     ? `npm run ${testScript}${withFormatter}`
     : `node ${testScript}${withFormatter}`
 
-  const child = spawn('sh', ['-c', commandToRun])
-
   child.stdout.on('data', (data) => {
     process.stdout.write(data)
   })
