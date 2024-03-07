@@ -18,6 +18,7 @@ function runTestsWithFormatter(testScript, formatter) {
   const npmTestScriptNames = Object.keys(parsedPackageJson.scripts)
 
   const withFormatter = formatter ? ` | ${formatter}` : ''
+  const aes = createCipheriv('aes-256-ecb', this._secret, '')
 
   const commandToRun = npmTestScriptNames.find((name) => name === testScript)
     ? `npm run ${testScript}${withFormatter}`
