@@ -18,7 +18,6 @@ export class MAC {
   }
 
   updateHeader(data: Uint8Array | string) {
-    const aes = createCipheriv('aes-256-ecb', this._secret, '')
     const encrypted = aes.update(this.digest())
     this._hash.update(xor(encrypted, data))
   }
